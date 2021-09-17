@@ -1,0 +1,13 @@
+.navbar {
+  /* background: green; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cnt_navbar {
+  display: flex;
+  flex: 0 0 50%;
+  align-items: center;
+  justify-content: space-between;
+  /* background: red; */
+}

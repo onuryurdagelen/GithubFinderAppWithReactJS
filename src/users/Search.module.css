@@ -1,0 +1,25 @@
+.cnt_search {
+  display: flex;
+  flex-direction: row;
+  /* background-color: green; */
+  flex: 1;
+}
+.search_form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  margin-left: 1rem;
+}
+.input {
+  margin-left: 2rem;
+  border-radius: 5px;
+}
+.search_input {
+  margin-bottom: 6px;
+  box-shadow: 0px 3px 0px 1px rgba(116, 99, 99, 0.3);
+  border-radius: 5px;
+}
+.search_input:focus {
+  outline: none;
+}
