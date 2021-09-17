@@ -12,10 +12,15 @@ export default class Search extends Component {
     if (this.state.text !== '') {
       this.props.searchUsers(this.state.text);
     }
+  };
+  clearListHandler = () => {
+    this.props.clearSearch();
     this.setState({ text: '' });
   };
   inputChangeHandler = e => {
     this.setState({ [e.target.name]: e.target.value });
+
+    this.props.onListingUsers(e.target.value);
   };
 
   render() {
@@ -40,7 +45,7 @@ export default class Search extends Component {
             className={`btn btn-dark btn-block ${classes.input}`}
           />
         </form>
-        <button className='btn btn-light' onClick={this.props.clearSearch}>
+        <button className='btn btn-light' onClick={this.clearListHandler}>
           Clear
         </button>
       </div>

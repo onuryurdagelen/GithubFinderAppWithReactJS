@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Search from '../../users/Search';
 import classes from './Navbar.module.css';
-const Navbar = ({ icon, title, searchUsers, clearSearch }) => {
+const Navbar = ({ icon, title, searchUsers, clearSearch, onListingUsers }) => {
   return (
     <nav className={`navbar bg-primary ${classes.navbar}`}>
       <div className={classes.cnt_navbar}>
@@ -10,7 +10,11 @@ const Navbar = ({ icon, title, searchUsers, clearSearch }) => {
           <i className={icon} />
           {title}
         </h1>
-        <Search searchUsers={searchUsers} clearSearch={clearSearch} />
+        <Search
+          searchUsers={searchUsers}
+          clearSearch={clearSearch}
+          onListingUsers={onListingUsers}
+        />
       </div>
     </nav>
   );
