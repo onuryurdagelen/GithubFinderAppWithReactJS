@@ -442,3 +442,10 @@ table th {
     justify-content: center;
   }
 }
+.alert-field {
+  padding: 1rem;
+  font-size: 1.3rem;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}

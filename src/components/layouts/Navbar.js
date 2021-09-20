@@ -2,7 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Search from '../../users/Search';
 import classes from './Navbar.module.css';
-const Navbar = ({ icon, title, searchUsers, clearSearch, onListingUsers }) => {
+const Navbar = ({
+  icon,
+  title,
+  searchUsers,
+  clearSearch,
+  onListingUsers,
+  showClear,
+  onExistingAlert,
+  onRemoveAlert,
+  setAlert,
+  isEmpty,
+}) => {
   return (
     <nav className={`navbar bg-primary ${classes.navbar}`}>
       <div className={classes.cnt_navbar}>
@@ -14,6 +25,11 @@ const Navbar = ({ icon, title, searchUsers, clearSearch, onListingUsers }) => {
           searchUsers={searchUsers}
           clearSearch={clearSearch}
           onListingUsers={onListingUsers}
+          showClear={showClear}
+          onExistingAlert={onExistingAlert}
+          onRemoveAlert={onRemoveAlert}
+          setAlert={setAlert}
+          isEmpty={isEmpty}
         />
       </div>
     </nav>
